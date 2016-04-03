@@ -115,7 +115,17 @@ void Graph::printDistanceFromSource()
 {
     for (int i = 0; i < numberOfNodes; i++)
     {
-        cout << "ID = " << i << " Value = " << graphNodes[i].getValue() << " Distance from source = " << graphNodes[i].getDistanceFromSource();
+        cout << "ID = " << i;
+        cout << " Value = " << graphNodes[i].getValue();
+        cout << " Distance from source = " << graphNodes[i].getDistanceFromSource();
+        if (graphNodes[i].getParent() != nullptr)
+        {
+            cout << " Parent ID = " << graphNodes[i].getParent()->getID();
+        }
+        else
+        {
+            cout << " No parent";
+        }
         cout << endl;
     }
 }
