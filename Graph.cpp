@@ -20,10 +20,6 @@ Graph::Graph()
     cout << endl << "Enter number of nodes in the graph : ";
     cin >> numberOfNodes;
     graphNodes = new Vertex[numberOfNodes];
-    for (int i = 0; i < numberOfNodes; i++)
-    {
-        graphNodes[i].setParent(nullptr);
-    }
 }
 
 void Graph::inputVertices()
